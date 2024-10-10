@@ -23,3 +23,10 @@
 hs_err_pid*
 replay_pid*
 /labs/.idea
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/FurtherOOP24.iml
+.idea/compiler.xml
+.idea/.name
+.idea/modules.xml
