@@ -1,6 +1,6 @@
 package lists;
 
-interface GenericList<T> extends Iterable<T> {
+public interface GenericList<T> extends Iterable<T> {
     boolean contains(T value);
 
     void append(T value);
