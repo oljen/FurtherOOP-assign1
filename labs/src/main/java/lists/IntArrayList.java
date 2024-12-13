@@ -9,13 +9,18 @@ public class IntArrayList implements IntList {
         len = 0;
     }
 
+    // Correct implementation of contains method
     public boolean contains(int value) {
-        // todo implement this properly
+        for (int i = 0; i < len; i++) {
+            if (values[i] == value) {
+                return true;
+            }
+        }
         return false;
     }
 
+    // Append method is unchanged
     public void append(int value) {
-        // this is inefficient but leave as is for now
         int[] newValues = new int[len + 1];
         for (int i = 0; i < len; i++) {
             newValues[i] = values[i];
@@ -25,8 +30,8 @@ public class IntArrayList implements IntList {
         len++;
     }
 
+    // Correct implementation of length method
     public int length() {
-        // todo: fix this!
-        return 0;
+        return len;
     }
 }

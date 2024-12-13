@@ -10,14 +10,32 @@ class IntLinkedList implements IntList {
     }
 
     public boolean contains(int value) {
-        // todo: implement this properly
+        IntNode current = head;
+        while (current != null) {
+            if (current.value == value) {
+                return true;
+            }
+            current = current.next;
+        }
         return false;
     }
 
+
     public void append(int value) {
-        // todo: implement this properly!
-        len += 2;
+        IntNode newNode = new IntNode(value);
+        if (head == null) {
+            head = newNode;
+        } else {
+            IntNode current = head;
+            // Traverse to the end of the list
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+        len++;
     }
+
 
     public int length() {
         return len;

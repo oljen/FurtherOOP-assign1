@@ -25,12 +25,29 @@ public class GenericLinkedList<T> implements GenericList<T> {
     }
 
     public boolean contains(T value) {
-        // todo: implement this properly
+        GenericNode<T> current = head;
+        while (current != null) {
+            if (current.value.equals(value)) {
+                return true;
+            }
+            current = current.next;
+        }
         return false;
     }
 
+
     public void append(T value) {
-        // todo: implement an efficient append method
+        GenericNode<T> newNode = new GenericNode<>(value);
+        if (head == null) {
+            head = newNode;
+        } else {
+            GenericNode<T> current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+        len++;
     }
 
     public int length() {
