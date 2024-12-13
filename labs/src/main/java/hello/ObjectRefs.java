@@ -17,6 +17,7 @@ public class ObjectRefs {
         a.next = b;
         b.next = c;
         c.next = a;
+        a = new A(4);
         System.out.println(a.x);
         System.out.println(a.next.x);
         System.out.println(a.next.next.x);
